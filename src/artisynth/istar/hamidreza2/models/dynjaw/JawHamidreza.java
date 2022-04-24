@@ -23,8 +23,9 @@ public class JawHamidreza extends JawLarynxDemo{
    public void build (String[] args) throws IOException {
        
 	   super.build (args);
-	    
 	   
+	    System.out.print("HI");
+	    
 	    InsversMuscles.put("lip","Left Inferior Lateral Pterygoid");
 		InsversMuscles.put("rip","Right Inferior Lateral Pterygoid");
 		InsversMuscles.put("lsp","Lateral Pterygoid");
