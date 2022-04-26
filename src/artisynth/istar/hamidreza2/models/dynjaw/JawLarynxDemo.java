@@ -106,7 +106,7 @@ public class JawLarynxDemo extends JawDemo {
       // create jaw model
       try {
 	 myJawModel = new JawModel("jawmodel", /* fixedLaryngeal */false, /* useComplexJoint */
-	       true, /* curvJoint */true);
+	       true, /* curvJoint */false);
       } catch (Exception e) {
 	 e.printStackTrace();
 	 System.err.println("RootJaw() - error to instantiating AmiraJaw");

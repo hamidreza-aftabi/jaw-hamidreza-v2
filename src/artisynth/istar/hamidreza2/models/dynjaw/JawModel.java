@@ -669,8 +669,8 @@ public class JawModel extends MechModel implements ScalableUnits,
            pc.setPlaneSize(jp.getPlaneSize());
            pc.setName(jp.name());
            pc.setForceType(ForceType.LINEAR);
-           pc.setStiffness (20000);
-           //pc.setDamping (50);
+           pc.setStiffness (50000);
+           pc.setDamping (50);
            con.add(pc);
       }
 
@@ -716,14 +716,14 @@ public class JawModel extends MechModel implements ScalableUnits,
          Xpw = updateTmjPose(plane);
          con.get(conOrder.indexOf(plane)).setCenter(new Point3d (Xpw.p.x,Xpw.p.y, Xpw.p.z));
          Xpw.R.getColumn (2, planeNormal);
-         con.get(conOrder.indexOf(plane)).setNormal(planeNormal.negate());
+         con.get(conOrder.indexOf(plane)).setNormal(planeNormal);
          break;
      }   
       case RTMJ: {
          Xpw = updateTmjPose(plane);
          con.get(conOrder.indexOf(plane)).setCenter(new Point3d (Xpw.p.x,Xpw.p.y, Xpw.p.z));
          Xpw.R.getColumn (2, planeNormal);
-         con.get(conOrder.indexOf(plane)).setNormal(planeNormal.negate());
+         con.get(conOrder.indexOf(plane)).setNormal(planeNormal);
          break;
       }
       case LBITE: {
@@ -760,14 +760,14 @@ public class JawModel extends MechModel implements ScalableUnits,
          Xpw = updateLtrlWallPose(plane);
          con.get(conOrder.indexOf(plane)).setCenter(new Point3d (Xpw.p.x,Xpw.p.y,Xpw.p.z));
          Xpw.R.getColumn (2, planeNormal);
-         con.get(conOrder.indexOf(plane)).setNormal(planeNormal.negate());
+         con.get(conOrder.indexOf(plane)).setNormal(planeNormal);
          break;
       }
       case RLTRL: {
          Xpw = updateLtrlWallPose(plane);
          con.get(conOrder.indexOf(plane)).setCenter(new Point3d (Xpw.p.x,Xpw.p.y,Xpw.p.z));
          Xpw.R.getColumn (2, planeNormal);
-         con.get(conOrder.indexOf(plane)).setNormal(planeNormal.negate());
+         con.get(conOrder.indexOf(plane)).setNormal(planeNormal);
          break;
       }
       case LPOST: {

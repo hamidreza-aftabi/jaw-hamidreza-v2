@@ -55,7 +55,7 @@ public class JawHamidreza extends JawLarynxDemo{
 
 
        
-       inverseSetup();
+       //inverseSetup();
 
            
    }
